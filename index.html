@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -8,130 +10,18 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    
-
-<style>
-
-   
-  table {
-    table-layout: fixed;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 90%;
-    bottom: 100px;
-  }
-
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-  }
-
-  .btn {
-    /* default for <button>, but useful for <a> */
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-
-    /* create a small space when buttons wrap on 2 lines */
-    margin: 2px 0;
-
-    /* invisible border (will be colored on hover/focus) */
-    border: solid 1px transparent;
-    border-radius: 4px;
-
-    /* size comes from text & padding (no width/height) */
-    padding: 0.5em 1em;
-
-    /* make sure colors have enough contrast! */
-    color: #ffffff;
-    background-color: #9555af;
-
-  }
-
-  button {
-    font-size: 16px;
-    width: 100%;
-    height: 50px;
-    box-shadow: 0px 0px 0px transparent;
-  }
-
-  @mixin button-reset {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  .my-custom-button {
-    @include button-reset;
-    padding: 10px;
-   /* background-color: skyblue;*/
-  }
-
-
-  tr:nth-child(even) {
-    background-color: #;
-  }
-
-</style>
-  <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/2020Jan19Horses.json", {onProgress: UnityProgress});
-    /*let d = new Date();
-    alert("Today's date is " + d);*/
-    /* var myTable = document.getElementById('myTable');
-    myTable.rows[0].cells[1].innerHTML = 'Hello';*/
-
-
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/buildfeb20.json", {onProgress: UnityProgress});
     </script>
- 
   </head>
-
-
   <body>
-
     <div class="webgl-content">
       <div id="unityContainer" style="width: 800px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-         <!-- <div class="title">DemoProject</div>  -->
+        <div class="title">DemoProject</div>
       </div>
     </div>
-
-    <p align='center'>
-
-
-  <table align="center" id="myTable">
-    <tr>
-      <th> <button class="my-custom-button btn"> Horse 1 </button> </th>
-      <th> <button class="my-custom-button btn"> Horse 2 </button> </th>
-      <th> <button class="my-custom-button btn"> Horse 3 </button> </th>
-      <th> <button class="my-custom-button btn"> Horse 4 </button> </th>
-      <th> <button class="my-custom-button btn"> Horse 5 </button> </th>
-      <th> <button class="my-custom-button btn"> Horse 6 </button> </th>
-    </tr>
-    <tr>
-      <td>0.500</td>
-      <td>0.899</td>
-      <td>0.123</td>
-      <td>0.335</td>
-      <td>0.627</td>
-      <td>0.416</td>
-      
-    </tr>
-    <tr>
-    </tr>
-  </table>
-
-
-
-
-<!-- 
-see https://gist.github.com/KartikTalwar/2306741 for repeat-calling of odds function -->
-
   </body>
-
-
 </html>
