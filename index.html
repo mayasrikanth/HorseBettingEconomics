@@ -10,11 +10,28 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/buildmar20.json", {onProgress: UnityProgress});
-      function f1() {
-        let d = new Date();
-        alert("Today's date is " + d);
+
+       function f1() {
+          test += 1
+          content = test
+          var x=document.getElementById('horse1');
+          x.innerHTML=content;
+         console.log(test)
+       }
+
+       function refreshData() {
+          x = 5;  // 5 Seconds
+
+          // Do your thing here
+
+          setInterval(f1, x*1000);
       }
+
+  test = 0
+  refreshData(); // execute function
     </script>
+
+    
     <style>
       #unityContainer {
         float:top;
@@ -36,8 +53,6 @@
         table-layout: fixed;
         font-family: arial, sans-serif;
         border-collapse: collapse;
-        
-        /*width: 80%;*/
       }
 
       td, th {
@@ -121,12 +136,12 @@
           <th> <button class="my-custom-button btn"> Horse 6 </button> </th>
         </tr>
         <tr>
-          <td>0.500</td>
-          <td>0.899</td>
-          <td>0.123</td>
-          <td>0.335</td>
-          <td>0.627</td>
-          <td>0.416</td>
+          <td id="horse1">0.500</td>
+          <td id="horse2">0.899</td>
+          <td id="horse3">0.123</td>
+          <td id="horse4">0.335</td>
+          <td id="horse5">0.627</td>
+          <td id="horse6">0.416</td>
           
         </tr>
         <tr>
