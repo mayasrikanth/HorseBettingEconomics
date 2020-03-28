@@ -16,7 +16,9 @@
           content = test
           var x=document.getElementById('horse1');
           x.innerHTML=content;
-         console.log(test)
+          
+          content1 = unityInstance.SendMessage('Track', 'getOdds')
+          console.log(content1)
        }
 
        function refreshData() {
